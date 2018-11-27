@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+</head>
+<body>
+    <button onclick="sortList()">Clasificar Arreglo</button> 
+    <ul id="par">
+        <strong>Pares</strong>
+    </ul>
+    <ul id="impar">
+        <strong>Impares</strong>
+    </ul>
+    <ul id="string">
+        <strong>Strings</strong>
+    </ul>
+    <script>
+        var arr = [1,'dos','tres',4,5,6,'siete',8,9,'diez'];
+        var impares = [];
+        var pares = [];
+        var strings = [];
+        function sortList(){
+            arr.map(function(x){
+                if(isEven(x)){
+                    pares.push(x)
+                } else if (isOdd(x)){
+                    impares.push(x)
+                } else {
+                    strings.push(x)
+                }
+            });
+            debugger;
+        };
+
+        function isEven(n){
+            return n % 2 == 0;
+        }
+
+        function isOdd(n){
+            return Math.abs(n % 2) == 1;
+        }
+    </script>
+</body>
+</html>
